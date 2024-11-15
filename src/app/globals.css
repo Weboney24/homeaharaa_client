@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary--color) !important;
+  cursor: grabbing !important;
+}
+
+::-webkit-scrollbar {
+  background: var(--secondary--color) !important;
+  width: 8px !important;
+}
+
+:root {
+  --primary--color: #ff7900;
+  --secondary--color: #77838b;
+  --primary--font: "Poppins" !important;
+  color: #000000bd;
+}
+
+@layer components {
+  .center_row_div {
+    @apply flex items-center justify-center;
+  }
+  .center_col_div {
+    @apply flex items-center justify-center flex-col;
+  }
+  .container {
+    @apply px-20;
+  }
+  .animation {
+    @apply transition-all duration-300;
+  }
+  .antd_input {
+    @apply !shadow-inner !w-[400px] !h-[50px] !rounded !border-gray-300 hover:!border-gray-300 focus:!border-gray-300 placeholder:!text-secondary_color;
+  }
+  .primary_button {
+    @apply py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-primary_color text-white rounded-md cursor-pointer;
+  }
+  .antd_button {
+    @apply !antd_input !font-Poppins !bg-primary_color tracking-wider uppercase !text-white border-transparent !text-lg !h-[50px] !w-[100%];
+  }
+  .heading {
+    @apply font-semibold px-4 text-primary_color h-[50px]  w-full center_row_div justify-start;
+  }
+  .dull {
+    @apply border bg-gray-100   font-medium;
+  }
+  .product_card_grid {
+    @apply grid 2xl:grid-cols-5 grid-cols-4 gap-x-2 gap-y-2 pt-6;
+  }
+  .popup_image {
+    @apply bg-[linear-gradient(to_right,#000000bd,#000000bd),url('https://img.freepik.com/premium-photo/assorted-mithai-with-authentic-indian-flavors_1106454-156783.jpg?w=826')];
+  }
+  .description_color{
+    @apply leading-loose text-secondary_color
+  }
+}
+
+.ant-carousel .slick-list .slick-slide > div > div {
+  border-radius: 10px !important;
+}
+
+.ant-form-item .ant-form-item-explain-error {
+  color: var(--primary--color) !important;
+}
+
+.ant-spin .ant-spin-dot-item {
+  color: var(--primary--color) !important;
+}
+
+.ant-form-item .ant-form-item-label > label {
+  font-family: var(--primary--font) !important;
+}
+
+.ant-select-outlined.ant-select-status-error:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: var(--secondary--color) !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  border-color: var(--primary--color) !important;
+  background: var(--primary--color) !important;
+}
+.ant-popconfirm-buttons > .ant-btn .css-dev-only-do-not-override-p8b6i .ant-btn-default .ant-btn-sm {
+  background: var(--primary--color) !important;
+  color: white !important;
+}
+
+.ant-modal .ant-modal-footer > .ant-btn + .ant-btn {
+  background: var(--secondary--color) !important;
+}
+
+.ant-btn-primary > span {
+  color: white !important;
+}
+.ant-btn-primary,
+.ant-btn-primary:hover {
+  background: var(--primary--color) !important;
+}
+
+.custom_height {
+  height: calc(100vh - 190px) !important;
+}
+
+.ant-select-single .ant-select-selector {
+  border-radius: 0px !important;
+}
+
+/* antd drawer */
+.ant-drawer .ant-drawer-body {
+  padding: 0px !important;
+}
+
+.ant-drawer .ant-drawer-content {
+  height: 110% !important;
+  padding-bottom: 100px !important;
+}
+
+/* carosal border radious */
+.ant-carousel .slick-list .slick-slide > div > div {
+  border-radius: 0px !important;
+}
+
+/* .ant-form-item {
+  margin-bottom: 0 !important;
+} */
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-expand-icon {
+  display: none !important;
+}
+
+.ant-collapse .ant-collapse-content > .ant-collapse-content-box {
+  padding: 32px 16px !important;
+}
+
+/* floating button */
+.ant-float-btn-default .ant-float-btn-body:hover {
+  background-color: white !important;
+}
